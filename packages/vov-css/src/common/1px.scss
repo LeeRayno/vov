@@ -1,0 +1,33 @@
+@import "../mixins/mixins.scss";
+
+[class *=vov-1px] {
+  position: relative;
+}
+
+.vov-1px {
+  &--surround::after {
+    @include vov-1px--surround()
+
+  }
+
+  &--top::after {
+    @include vov-1px--top();
+  }
+
+  &--bottom::after {
+    @include vov-1px--bottom();
+  }
+
+  &--left::after {
+    @include vov-1px--left();
+  }
+
+  &--right::after {
+    @include vov-1px--right();
+  }
+
+  &--top-bottom::after {
+    @include vov-1px--top-bottom();
+  }
+}
+

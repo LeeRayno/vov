@@ -1,12 +1,12 @@
 <template>
-  <div class="suv-button" @click="handleClick">
+  <div class="vov-button" @click="handleClick">
     <slot>按钮</slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'suv-button',
+  name: 'vov-button',
 
   methods: {
     handleClick(e) {

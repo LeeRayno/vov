@@ -1,5 +1,5 @@
 <template>
-  <suv-button @click="handleClick"></suv-button>
+  <vov-button @click="handleClick"></vov-button>
 </template>
 
 <script>

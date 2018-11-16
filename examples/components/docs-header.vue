@@ -1,10 +1,10 @@
 <template>
-  <header class="suv-header">
-    <h1 class="suv-header__logo">
-      <a href="#">Suv.js</a>
+  <header class="vov-header">
+    <h1 class="vov-header__logo">
+      <a href="#">vov.js</a>
     </h1>
-    <div class="suv-header__link">
-      <a href="https://github.com/LeeRayno/suv" target="_blank"></a>
+    <div class="vov-header__link">
+      <a href="https://github.com/LeeRayno/vov" target="_blank"></a>
     </div>
   </header>
 </template>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "packages/suv-css/src/mixins/mixins.scss";
+@import "packages/vov-css/src/mixins/mixins.scss";
 @include b(header) {
   position: fixed;
   top: 0;
@@ -30,7 +30,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 
   a {
     display: block;

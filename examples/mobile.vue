@@ -13,4 +13,3 @@ export default {
 <style lang="scss">
 @import "./assets/reset.scss";
 </style>
-

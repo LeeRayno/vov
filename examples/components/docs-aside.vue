@@ -1,12 +1,12 @@
 <template>
-  <aside class="suv-aside">
-    <ul class="suv-aside__wrap">
-      <li class="suv-aside__item" v-for="(item, index) in navs" :key="index">
-        <h5 class="suv-aside__title">{{ item.name }}</h5>
-        <div class="suv-aside__group" v-for="(group, groupIndex) in item.groups" :key="groupIndex">
-          <h6 class="suv-aside__subtitle">{{ group.groupName }}</h6>
-          <ul class="suv-aside__list">
-            <li class="suv-aside__router" v-for="(list, listIndex) in group.list" :key="listIndex">
+  <aside class="vov-aside">
+    <ul class="vov-aside__wrap">
+      <li class="vov-aside__item" v-for="(item, index) in navs" :key="index">
+        <h5 class="vov-aside__title">{{ item.name }}</h5>
+        <div class="vov-aside__group" v-for="(group, groupIndex) in item.groups" :key="groupIndex">
+          <h6 class="vov-aside__subtitle">{{ group.groupName }}</h6>
+          <ul class="vov-aside__list">
+            <li class="vov-aside__router" v-for="(list, listIndex) in group.list" :key="listIndex">
               <router-link :to="list.path">{{ list.title }}</router-link>
             </li>
           </ul>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "packages/suv-css/src/mixins/mixins.scss";
+@import "packages/vov-css/src/mixins/mixins.scss";
 
 @include b(aside) {
   position: fixed;

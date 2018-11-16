@@ -1,13 +1,13 @@
 <template>
-  <div class="suv-hello" @click="handleClick">
+  <div class="vov-hello" @click="handleClick">
     hello
-    <p class="suv-hello__message">{{ message }}</p>
+    <p class="vov-hello__message">{{ message }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'suv-hello',
+  name: 'vov-hello',
   props: {
     message: {
       type: String,

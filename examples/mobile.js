@@ -4,14 +4,14 @@ import Vue from 'vue'
 import App from './mobile.vue'
 import router from './router'
 import isMobile from './isMobile'
-import suv from '@/index'
-import 'packages/suv-css/src/index.scss'
+import vov from '@/index'
+import 'packages/vov-css/src/index.scss'
 
-Vue.use(suv)
+Vue.use(vov)
 
 router.beforeEach((from, to, next) => {
   if (!isMobile) {
-    window.location.replace('/')
+    window.location.replace('index.html')
     return
   }
   next()

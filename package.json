@@ -1,13 +1,12 @@
 {
-  "name": "suv",
+  "name": "vov",
   "version": "1.0.0",
   "description": "study how to build a UI Component libray for Vue",
-  "main": "lib/suv.js",
-  "module": "/lib/suv.js",
-  "unpkg": "lib/suv.js",
-  "style": "lib/suv-css/index.css",
+  "main": "lib/vov.js",
+  "module": "/lib/vov.js",
+  "unpkg": "lib/vov.js",
+  "style": "lib/vov-css/index.css",
   "author": "LeeRayno",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -16,7 +15,7 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:docs": "node build/build.js",
     "build:lib": "webpack --progress --hide-modules --config build/webpack.lib.conf.js",
-    "build:css": "gulp build --gulpfile packages/suv-css/gulpfile.js && rimraf lib/suv-css && cp-cli packages/suv-css/lib lib/suv-css"
+    "build:css": "gulp build --gulpfile packages/vov-css/gulpfile.js && rimraf lib/vov-css && cp-cli packages/vov-css/lib lib/vov-css"
   },
   "files": [
     "lib"
@@ -28,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeeRayno/suv.git"
+    "url": "git+https://github.com/LeeRayno/vov.git"
   },
   "bugs": {
-    "url": "https://github.com/LeeRayno/suv/issues"
+    "url": "https://github.com/LeeRayno/vov/issues"
   },
-  "homepage": "https://github.com/LeeRayno/suv#readme",
+  "homepage": "https://github.com/LeeRayno/vov#readme",
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

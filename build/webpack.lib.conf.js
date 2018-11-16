@@ -4,11 +4,11 @@ const baseWebpackConfig = require('./webpack.base.conf')
 
 const LibWebpackConfig = Object.assign(baseWebpackConfig, {
   entry: {
-    suv: './src/index.js'
+    vov: './src/index.js'
   },
   output: {
     filename: './lib/[name].js',
-    library: 'suv',
+    library: 'vov',
     libraryTarget: 'umd'
   },
   externals: {

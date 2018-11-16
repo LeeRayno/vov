@@ -1,8 +1,8 @@
 <template>
-  <li class="suv-mobile__group">
-    <h6 class="suv-mobile__title" @click="handleClick">{{ data.groupName }}</h6>
-    <ul class="suv-mobile__list" ref="list" :class="{active: active}">
-      <li class="suv-mobile__item suv-1px--top" v-for="(item, index) in data.list" :key="index">
+  <li class="vov-mobile__group">
+    <h6 class="vov-mobile__title" @click="handleClick">{{ data.groupName }}</h6>
+    <ul class="vov-mobile__list" ref="list" :class="{active: active}">
+      <li class="vov-mobile__item vov-1px--top" v-for="(item, index) in data.list" :key="index">
         <router-link :to="item.path">{{ item.title }}</router-link>
       </li>
     </ul>
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "packages/suv-css/src/mixins/mixins.scss";
+@import "packages/vov-css/src/mixins/mixins.scss";
 
 $h: 56px;
 @include b(mobile) {

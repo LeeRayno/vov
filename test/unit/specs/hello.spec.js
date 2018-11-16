@@ -11,15 +11,15 @@ describe('Hello.vue', () => {
   it('render default classList in hello', () => {
     vm = createTest(Hello)
 
-    expect(vm.$el.classList.contains('suv-hello')).to.be.true
-    const message = vm.$el.querySelector('.suv-hello__message')
+    expect(vm.$el.classList.contains('vov-hello')).to.be.true
+    const message = vm.$el.querySelector('.vov-hello__message')
     expect(message.textContent).to.equal('message')
   })
 
   it('create a hello for click with promise', (done) => {
     let result
     vm = createVue({
-      template: `<suv-hello @click="handleClick"></suv-hello>`,
+      template: `<vov-hello @click="handleClick"></vov-hello>`,
       methods: {
         handleClick(msg) {
           result = msg

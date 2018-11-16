@@ -1,7 +1,7 @@
 {
-  "name": "suv-css",
+  "name": "vov-css",
   "version": "1.0.0",
-  "description": "suv css",
+  "description": "vov css",
   "main": "lib/index.css",
   "style": "lib/index.css",
   "files": [
@@ -13,7 +13,7 @@
     "build": "gulp build"
   },
   "keywords": [
-    "suv",
+    "vov",
     "css"
   ],
   "author": "LeeRayno",

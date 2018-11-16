@@ -5,7 +5,7 @@
 ```html
 <template>
   <div>
-    <suv-hello @click="handleClick"></suv-hello>
+    <vov-hello @click="handleClick"></vov-hello>
     <p>{{ msg }}</p>
   </div>
 </template>

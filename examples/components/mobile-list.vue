@@ -1,8 +1,8 @@
 <template>
-  <div class="suv-mobile">
-    <h1 class="suv-mobile__logo"></h1>
-    <p class="suv-mobile__desc">Suv.js 移动端组件库</p>
-    <ul class="suv-mobile__groups">
+  <div class="vov-mobile">
+    <h1 class="vov-mobile__logo"></h1>
+    <p class="vov-mobile__desc">vov.js 移动端组件库</p>
+    <ul class="vov-mobile__groups">
       <mobile-group v-for="(nav, index) in navs" :data="nav" :key="index" />
     </ul>
   </div>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "packages/suv-css/src/mixins/mixins.scss";
+@import "packages/vov-css/src/mixins/mixins.scss";
 
 @include b(mobile) {
 
@@ -44,4 +44,3 @@ export default {
   }
 }
 </style>
-
