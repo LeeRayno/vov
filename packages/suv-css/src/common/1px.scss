@@ -1,0 +1,33 @@
+@import "../mixins/mixins.scss";
+
+[class *=suv-1px] {
+  position: relative;
+}
+
+.suv-1px {
+  &--surround::after {
+    @include suv-1px--surround()
+
+  }
+
+  &--top::after {
+    @include suv-1px--top();
+  }
+
+  &--bottom::after {
+    @include suv-1px--bottom();
+  }
+
+  &--left::after {
+    @include suv-1px--left();
+  }
+
+  &--right::after {
+    @include suv-1px--right();
+  }
+
+  &--top-bottom::after {
+    @include suv-1px--top-bottom();
+  }
+}
+

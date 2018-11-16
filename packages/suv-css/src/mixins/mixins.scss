@@ -1,0 +1,153 @@
+@import "./functions.scss";
+
+/* BEM
+ -------------------------- */
+ @mixin b($block) {
+  $B: $namespace+'-'+$block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+/* WH
+ -------------------------- */
+@mixin wh($width: 100%, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* 1PX
+ -------------------------- */
+
+ $border-color: #ccc;
+
+ %common {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+ }
+
+@mixin suv-1px--surround($style: solid, $color: $border-color, $radius: 0) {
+
+  @extend %common;
+  @include wh();
+
+  border: 1px $style $color;
+  border-radius: $radius;
+  transform-origin: left top;
+
+  @media (min-resolution: 2dppx) {
+    @include wh($width: 200%);
+    transform: scale(.5);
+  }
+
+  @media (min-resolution: 3dppx) {
+    @include wh($width: 300%);
+    transform: scale(.333333);
+  }
+
+  @media (min-resolution: 4dppx) {
+    @include wh($width: 400%);
+    transform: scale(.25);
+  }
+}
+
+@mixin suv-1px--top-bottom($style: solid, $color: $border-color) {
+  @include suv-1px--surround($style: $style, $color: $color, $radius: 0);
+  border-width: 1px 0;
+}
+
+@mixin suv-1px--top($style: solid, $color: $border-color) {
+  @extend %common;
+  @include wh($height: 0);
+
+  border-top: 1px $style $color;
+
+  @media (min-resolution: 2dppx) {
+    transform: scaleY(.5);
+  }
+
+  @media (min-resolution: 3dppx) {
+    transform: scaleY(.333333)
+  }
+
+  @media (min-resolution: 4dppx) {
+    transform: scaleY(.25);
+  }
+
+}
+
+@mixin suv-1px--bottom($style: solid, $color: $border-color) {
+  @include suv-1px--top($style: $style, $color: $color);
+  bottom: 0;
+  top: initial;
+}
+
+@mixin suv-1px--left($style: solid, $color: $border-color) {
+  @extend %common;
+  @include wh($width: 0, $height: 100%);
+
+  border-left: 1px $style $color;
+
+  @media (min-resolution: 2dppx) {
+    transform: scaleX(.5);
+  }
+
+  @media (min-resolution: 3dppx) {
+    transform: scaleX(.333333);
+  }
+
+  @media (min-resolution: 4dppx) {
+    transform: scaleX(.25);
+  }
+
+}
+
+@mixin suv-1px--right($style: solid, $color: $border-color) {
+  @include suv-1px--left($style: $style, $color: $color);
+  right: 0;
+  left: initial;
+}

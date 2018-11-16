@@ -1,0 +1,13 @@
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+@include b(hello) {
+  color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include e(message) {
+    color: red;
+  }
+}
