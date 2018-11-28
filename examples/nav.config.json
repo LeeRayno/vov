@@ -29,16 +29,8 @@
               "title": "Button 按钮"
             },
             {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/hello2",
-              "title": "hello2"
+              "path": "/icon",
+              "title": "Icon 图标"
             }
           ]
         },
@@ -46,20 +38,8 @@
           "groupName": "提示",
           "list": [
             {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/button",
-              "title": "Button 按钮"
-            },
-            {
-              "path": "/hello2",
-              "title": "hello2"
+              "path": "/toast",
+              "title": "Toast 轻提示"
             }
           ]
         }

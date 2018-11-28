@@ -2,7 +2,7 @@
 @import "./mixins/mixins.scss";
 
 @include b(hello) {
-  color: $color;
+  color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;

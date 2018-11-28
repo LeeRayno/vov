@@ -1,1 +1,0 @@
-webpackJsonp([5],{"7jcf":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"app"},[t("router-view")],1)},staticRenderFns:[]};var u=n("VU/8")({name:"App"},r,!1,function(e){n("J/Nu")},null,null);t.default=u.exports},"J/Nu":function(e,t){}});

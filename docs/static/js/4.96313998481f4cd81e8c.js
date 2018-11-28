@@ -1,1 +1,0 @@
-webpackJsonp([4],{"ft/V":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var l={methods:{handleClick:function(e){console.log(e)}}},c={render:function(){var e=this.$createElement;return(this._self._c||e)("vov-button",{on:{click:this.handleClick}})},staticRenderFns:[]},o=t("VU/8")(l,c,!1,null,null,null);n.default=o.exports}});

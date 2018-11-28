@@ -2,11 +2,125 @@
 @import "./mixins/mixins.scss";
 
 @include b(button) {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ccc;
-  color: #fff;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: $--button-border-radius;
+  padding: 0 10px;
+  line-height: 1;
+  outline: none;
+  user-select: none;
+
+  &--default {
+    background: $--color-white;
+    color: $--button-font-default-color;
+
+    &::after{
+      @include vov-1px--surround($color: $--button-border-default-color, $radius: $--button-border-radius);
+    }
+  }
+
+  &.is-disabled {
+    opacity: .5;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &:active{
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, .15);
+    }
+  }
+
+
+  &--primary {
+    background: $--color-primary;
+    color: $--color-white;
+
+    &.is-plain {
+      background: $--color-white;
+      color: $--color-primary;
+
+      &::after{
+        @include vov-1px--surround($color: $--color-primary, $radius: $--button-border-radius);
+      }
+    }
+  }
+
+  &--danger {
+    background: $--color-danger;
+    color: $--color-white;
+
+    &.is-plain {
+      background: $--color-white;
+      color: $--color-danger;
+
+      &::after{
+        @include vov-1px--surround($color: $--color-danger, $radius: $--button-border-radius);
+      }
+    }
+  }
+
+  &--warning {
+    background: $--color-warning;
+    color: $--color-white;
+
+    &.is-plain {
+      color: $--color-warning;
+      background: $--color-white;
+
+      &::after{
+        @include vov-1px--surround($color: $--color-warning, $radius: $--button-border-radius);
+      }
+    }
+  }
+
+  &--success {
+    background: $--color-success;
+    color: $--color-white;
+
+    &.is-plain {
+      background: $--color-white;
+      color: $--color-success;
+
+      &::after{
+        @include vov-1px--surround($color: $--color-success, $radius: $--button-border-radius);
+      }
+    }
+  }
+
+
+
+  &--large {
+    height: $--button-large-height;
+    font-size: $--button-large-size;
+    width: 100%;
+  }
+
+  &--normal {
+    height: $--button-normal-height;
+    font-size: $--button-normal-size;
+    padding: 0 $--button-normal-padding;
+  }
+
+  &--small {
+    height: $--button-small-height;
+    font-size: $--button-small-size;
+    padding: 0 $--button-small-padding;
+  }
+
+  &--mini {
+    height: $--button-mini-height;
+    font-size: $--button-mini-size;
+    padding: 0 $--button-mini-padding;
+  }
 }

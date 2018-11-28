@@ -1,1 +1,32 @@
-$color: mix(#fff, #ccc, 0.5);
+/* Colors
+-------------------------- */
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+
+$--color-default: #fff !default;
+$--color-primary: #ff6b23 !default;
+$--color-warning: #eabb3b !default;
+$--color-success: #38b361 !default;
+$--color-danger: #ff525e !default;
+
+
+/* Button
+-------------------------- */
+$--button-border-radius: 3px !default;
+
+$--button-border-default-color: #a3a3a3 !default;
+$--button-font-default-color: #666 !default;
+
+$--button-large-height: 44px !default;
+$--button-normal-height: 40px !default;
+$--button-small-height: 32px !default;
+$--button-mini-height: 26px !default;
+
+$--button-normal-padding: 53px !default;
+$--button-small-padding: 26px !default;
+$--button-mini-padding: 15px;
+
+$--button-large-size: 17px !default;
+$--button-normal-size: 16px !default;
+$--button-small-size: 14px !default;
+$--button-mini-size: 12px !default;

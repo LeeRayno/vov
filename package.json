@@ -15,7 +15,9 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:docs": "node build/build.js",
     "build:lib": "webpack --progress --hide-modules --config build/webpack.lib.conf.js",
-    "build:css": "gulp build --gulpfile packages/vov-css/gulpfile.js && rimraf lib/vov-css && cp-cli packages/vov-css/lib lib/vov-css"
+    "build:css": "gulp build --gulpfile packages/vov-css/gulpfile.js && rimraf lib/vov-css && cp-cli packages/vov-css/lib lib/vov-css",
+    "build": "npm run build:docs && npm run build:lib && npm run build:css",
+    "prepublish": "npm run build"
   },
   "files": [
     "lib"

@@ -6,8 +6,11 @@ import router from './router'
 import isMobile from './isMobile'
 import vov from '@/index'
 import 'packages/vov-css/src/index.scss'
+import demoBlock from './components/mobile-demo-block'
 
 Vue.use(vov)
+
+Vue.component(demoBlock.name, demoBlock)
 
 router.beforeEach((from, to, next) => {
   if (!isMobile) {
