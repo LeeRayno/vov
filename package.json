@@ -1,6 +1,6 @@
 {
   "name": "vov",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "study how to build a UI Component libray for Vue",
   "main": "lib/vov.js",
   "module": "/lib/vov.js",
