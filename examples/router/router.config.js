@@ -21,6 +21,11 @@ function regesiterRoute(navConfig, isMobile) {
       path: '/',
       component: () => import('../components/mobile-list.vue')
     })
+  } else {
+    routes.push({
+      path: '*',
+      redirect: '/intro'
+    })
   }
 
   return routes

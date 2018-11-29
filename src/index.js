@@ -1,9 +1,11 @@
 import Hello from '../packages/hello'
 import Button from '../packages/button'
+import Icon from '../packages/icon'
 
 const components = [
   Hello,
-  Button
+  Button,
+  Icon
 ]
 
 const install = function(Vue) {
@@ -19,7 +21,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 export {
   install,
   Hello,
-  Button
+  Button,
+  Icon
 }
 
 export default {

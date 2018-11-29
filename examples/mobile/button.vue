@@ -14,13 +14,13 @@
       <vov-button plain type="success">成功按钮</vov-button>
     </demo-block>
     <demo-block title="禁用按钮">
-      <vov-button disabled type="primary">主题按钮</vov-button>
+      <vov-button disabled type="primary" @click="handleClick">主题按钮</vov-button>
       <vov-button disabled type="warning">警告按钮</vov-button>
       <vov-button disabled type="danger">危险按钮</vov-button>
       <vov-button disabled type="success">成功按钮</vov-button>
     </demo-block>
     <demo-block title="按钮大小">
-      <vov-button size="large"></vov-button>
+      <vov-button size="large" @click="handleClick"></vov-button>
       <vov-button size="normal"></vov-button>
       <vov-button size="small"></vov-button>
       <vov-button size="mini"></vov-button>
