@@ -1,12 +1,21 @@
 <template>
   <aside class="vov-aside">
     <ul class="vov-aside__wrap">
-      <li class="vov-aside__item" v-for="(item, index) in navs" :key="index">
+      <li
+        v-for="(item, index) in navs"
+        :key="index"
+        class="vov-aside__item">
         <h5 class="vov-aside__title">{{ item.name }}</h5>
-        <div class="vov-aside__group" v-for="(group, groupIndex) in item.groups" :key="groupIndex">
+        <div
+          v-for="(group, groupIndex) in item.groups"
+          :key="groupIndex"
+          class="vov-aside__group">
           <h6 class="vov-aside__subtitle">{{ group.groupName }}</h6>
           <ul class="vov-aside__list">
-            <li class="vov-aside__router" v-for="(list, listIndex) in group.list" :key="listIndex">
+            <li
+              v-for="(list, listIndex) in group.list"
+              :key="listIndex"
+              class="vov-aside__router">
               <router-link :to="list.path">{{ list.title }}</router-link>
             </li>
           </ul>
@@ -19,7 +28,7 @@
 <script>
 import navConfig from '../nav.config.json'
 export default {
-  name: 'docs-aside',
+  name: 'DocsAside',
 
   data() {
     return {

@@ -5,7 +5,7 @@
     <div class="main-content">
       <div class="page-container clearfix">
         <div class="page-content">
-          <router-view></router-view>
+          <router-view/>
         </div>
       </div>
     </div>

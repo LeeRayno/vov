@@ -1,13 +1,18 @@
 <template>
-  <i :class="`vov-icon-${name}`" @click="handleClick"></i>
+  <i
+    :class="`vov-icon-${name}`"
+    @click="handleClick"/>
 </template>
 
 <script>
 export default {
-  name: 'vov-icon',
+  name: 'VovIcon',
 
   props: {
-    name: String
+    name: {
+      type: String,
+      default: ''
+    }
   },
 
   methods: {

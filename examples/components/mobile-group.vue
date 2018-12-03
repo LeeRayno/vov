@@ -1,8 +1,16 @@
 <template>
   <li class="vov-mobile__group">
-    <h6 class="vov-mobile__title" @click="handleClick">{{ data.groupName }}</h6>
-    <ul class="vov-mobile__list" ref="list" :class="{active: active}">
-      <li class="vov-mobile__item vov-1px--top" v-for="(item, index) in data.list" :key="index">
+    <h6
+      class="vov-mobile__title"
+      @click="handleClick">{{ data.groupName }}</h6>
+    <ul
+      ref="list"
+      :class="{active: active}"
+      class="vov-mobile__list">
+      <li
+        v-for="(item, index) in data.list"
+        :key="index"
+        class="vov-mobile__item vov-1px--top">
         <router-link :to="item.path">{{ item.title }}</router-link>
       </li>
     </ul>
@@ -11,7 +19,7 @@
 
 <script>
 export default {
-  name: 'mobile-group',
+  name: 'MobileGroup',
 
   props: {
     data: {

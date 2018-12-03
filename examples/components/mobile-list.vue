@@ -1,9 +1,12 @@
 <template>
   <div class="vov-mobile">
-    <h1 class="vov-mobile__logo"></h1>
+    <h1 class="vov-mobile__logo"/>
     <p class="vov-mobile__desc">vov.js 移动端组件库</p>
     <ul class="vov-mobile__groups">
-      <mobile-group v-for="(nav, index) in navs" :data="nav" :key="index" />
+      <mobile-group
+        v-for="(nav, index) in navs"
+        :data="nav"
+        :key="index" />
     </ul>
   </div>
 </template>
@@ -13,16 +16,16 @@ import navConfig from '../nav.config.json'
 import MobileGroup from './mobile-group.vue'
 const navs = navConfig['zh-CN'].filter(item => item.isShowInMobile)[0].groups
 export default {
-  name: 'mobile-list',
+  name: 'MobileList',
+
+  components: {
+    MobileGroup
+  },
 
   data() {
     return {
       navs
     }
-  },
-
-  components: {
-    MobileGroup
   }
 }
 </script>

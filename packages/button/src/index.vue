@@ -1,6 +1,5 @@
 <template>
   <button
-    class="vov-button"
     :class="[
       `vov-button--${type}`,
       `vov-button--${size}`,
@@ -10,14 +9,15 @@
       }
     ]"
     :disabled="disabled"
+    class="vov-button"
     @click="handleClick">
-      <slot>按钮</slot>
+    <slot>按钮</slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'vov-button',
+  name: 'VovButton',
 
   props: {
     type: {
@@ -30,8 +30,14 @@ export default {
       default: 'normal'
     },
 
-    disabled: Boolean,
-    plain: Boolean
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    }
   },
 
   methods: {

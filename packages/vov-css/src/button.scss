@@ -11,36 +11,36 @@
   line-height: 1;
   outline: none;
   user-select: none;
+  overflow: hidden;
 
   &--default {
     background: $--color-white;
     color: $--button-font-default-color;
 
-    &::after{
+    &::after {
       @include vov-1px--surround($color: $--button-border-default-color, $radius: $--button-border-radius);
     }
   }
 
   &.is-disabled {
-    opacity: .5;
+    opacity: 0.5;
 
     &::before {
       display: none;
     }
   }
 
-  &:active{
-    &::before{
+  &:active {
+    &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, .15);
+      background: rgba(0, 0, 0, 0.15);
     }
   }
-
 
   &--primary {
     background: $--color-primary;
@@ -50,7 +50,7 @@
       background: $--color-white;
       color: $--color-primary;
 
-      &::after{
+      &::after {
         @include vov-1px--surround($color: $--color-primary, $radius: $--button-border-radius);
       }
     }
@@ -64,7 +64,7 @@
       background: $--color-white;
       color: $--color-danger;
 
-      &::after{
+      &::after {
         @include vov-1px--surround($color: $--color-danger, $radius: $--button-border-radius);
       }
     }
@@ -78,7 +78,7 @@
       color: $--color-warning;
       background: $--color-white;
 
-      &::after{
+      &::after {
         @include vov-1px--surround($color: $--color-warning, $radius: $--button-border-radius);
       }
     }
@@ -92,13 +92,11 @@
       background: $--color-white;
       color: $--color-success;
 
-      &::after{
+      &::after {
         @include vov-1px--surround($color: $--color-success, $radius: $--button-border-radius);
       }
     }
   }
-
-
 
   &--large {
     height: $--button-large-height;

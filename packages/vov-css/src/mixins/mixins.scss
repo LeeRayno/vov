@@ -2,8 +2,8 @@
 
 /* BEM
  -------------------------- */
- @mixin b($block) {
-  $B: $namespace+'-'+$block !global;
+@mixin b($block) {
+  $B: $namespace + "-"+ $block !global;
 
   .#{$B} {
     @content;
@@ -14,8 +14,9 @@
   $E: $element !global;
   $selector: &;
   $currentSelector: "";
+
   @each $unit in $element {
-    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    $currentSelector: #{$currentSelector +"."+$B+$element-separator+$unit+","};
   }
 
   @if hitAllSpecialNestRule($selector) {
@@ -26,7 +27,9 @@
         }
       }
     }
-  } @else {
+  }
+
+  @else {
     @at-root {
       #{$currentSelector} {
         @content;
@@ -38,8 +41,9 @@
 @mixin m($modifier) {
   $selector: &;
   $currentSelector: "";
+
   @each $unit in $modifier {
-    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+    $currentSelector: #{$currentSelector +&+$modifier-separator+$unit+","};
   }
 
   @at-root {
@@ -59,20 +63,20 @@
 /* 1PX
  -------------------------- */
 
- $border-color: #ccc;
+$border-color: #ccc;
 
- %common {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    box-sizing: border-box;
- }
+%common {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+}
 
 @mixin vov-1px--surround($style: solid, $color: $border-color, $radius: 0) {
-
   @extend %common;
+
   @include wh();
 
   border: 1px $style $color;
@@ -81,73 +85,82 @@
 
   @media (min-resolution: 2dppx) {
     @include wh($width: 200%);
-    transform: scale(.5);
+
+    border-radius: $radius * 2;
+    transform: scale(0.5);
   }
 
   @media (min-resolution: 3dppx) {
     @include wh($width: 300%);
-    transform: scale(.333333);
+
+    border-radius: $radius * 3;
+    transform: scale(0.333333);
   }
 
   @media (min-resolution: 4dppx) {
     @include wh($width: 400%);
-    transform: scale(.25);
+
+    border-radius: $radius * 4;
+    transform: scale(0.25);
   }
 }
 
 @mixin vov-1px--top-bottom($style: solid, $color: $border-color) {
   @include vov-1px--surround($style: $style, $color: $color, $radius: 0);
+
   border-width: 1px 0;
 }
 
 @mixin vov-1px--top($style: solid, $color: $border-color) {
   @extend %common;
+
   @include wh($height: 0);
 
   border-top: 1px $style $color;
 
   @media (min-resolution: 2dppx) {
-    transform: scaleY(.5);
+    transform: scaleY(0.5);
   }
 
   @media (min-resolution: 3dppx) {
-    transform: scaleY(.333333)
+    transform: scaleY(0.333333);
   }
 
   @media (min-resolution: 4dppx) {
-    transform: scaleY(.25);
+    transform: scaleY(0.25);
   }
-
 }
 
 @mixin vov-1px--bottom($style: solid, $color: $border-color) {
   @include vov-1px--top($style: $style, $color: $color);
+
   bottom: 0;
   top: initial;
 }
 
 @mixin vov-1px--left($style: solid, $color: $border-color) {
   @extend %common;
+
   @include wh($width: 0, $height: 100%);
 
   border-left: 1px $style $color;
 
   @media (min-resolution: 2dppx) {
-    transform: scaleX(.5);
+    transform: scaleX(0.5);
   }
 
   @media (min-resolution: 3dppx) {
-    transform: scaleX(.333333);
+    transform: scaleX(0.333333);
   }
 
   @media (min-resolution: 4dppx) {
-    transform: scaleX(.25);
+    transform: scaleX(0.25);
   }
-
 }
 
 @mixin vov-1px--right($style: solid, $color: $border-color) {
   @include vov-1px--left($style: $style, $color: $color);
+
   right: 0;
   left: initial;
 }

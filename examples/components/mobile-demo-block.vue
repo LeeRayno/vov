@@ -9,9 +9,12 @@
 
 <script>
 export default {
-  name: 'demo-block',
+  name: 'DemoBlock',
   props: {
-    title: String
+    title: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>

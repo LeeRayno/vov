@@ -2,7 +2,9 @@
   <div>
     <demo-block title="Icon 图标">
       <ul class="icon-list">
-        <li v-for="(icon, index) in icons" :key="index">
+        <li
+          v-for="(icon, index) in icons"
+          :key="index">
           <vov-icon :name="icon" />
           <span>{{ icon }}</span>
         </li>

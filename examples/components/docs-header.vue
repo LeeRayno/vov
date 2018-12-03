@@ -4,14 +4,16 @@
       <a href="#">vov.js</a>
     </h1>
     <div class="vov-header__link">
-      <a href="https://github.com/LeeRayno/vov" target="_blank"></a>
+      <a
+        href="https://github.com/LeeRayno/vov"
+        target="_blank"/>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'docs-header'
+  name: 'DocsHeader'
 }
 </script>
 

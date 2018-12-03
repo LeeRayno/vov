@@ -1,5 +1,7 @@
 <template>
-  <div class="vov-hello" @click="handleClick">
+  <div
+    class="vov-hello"
+    @click="handleClick">
     hello
     <p class="vov-hello__message">{{ message }}</p>
   </div>
@@ -7,7 +9,7 @@
 
 <script>
 export default {
-  name: 'vov-hello',
+  name: 'VovHello',
   props: {
     message: {
       type: String,

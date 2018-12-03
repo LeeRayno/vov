@@ -1,15 +1,18 @@
 @font-face {
-  font-family: 'vov-icon';  /* project id 941803 */
-  src: url('//at.alicdn.com/t/font_941803_6ammnq8g4d.eot');
-  src: url('//at.alicdn.com/t/font_941803_6ammnq8g4d.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_941803_6ammnq8g4d.woff') format('woff'),
-  url('//at.alicdn.com/t/font_941803_6ammnq8g4d.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_941803_6ammnq8g4d.svg#vov-icon') format('svg');
+  font-family: "vov-icon";
+
+  /* project id 941803 */
+  src: url("//at.alicdn.com/t/font_941803_6ammnq8g4d.eot");
+  src:
+    url("//at.alicdn.com/t/font_941803_6ammnq8g4d.eot?#iefix") format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_941803_6ammnq8g4d.woff") format("woff"),
+    url("//at.alicdn.com/t/font_941803_6ammnq8g4d.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_941803_6ammnq8g4d.svg#vov-icon") format("svg");
 }
 
 [class^="vov-icon"],
 [class*=" vov-icon"] {
-  font-family: 'vov-icon' !important;
+  font-family: "vov-icon" !important;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -18,9 +21,7 @@
   font-size: 16px;
   vertical-align: baseline;
   display: inline-block;
-
   color: #666;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
