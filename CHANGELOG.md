@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/LeeRayno/vov/compare/v1.0.2...v1.0.3) (2018-12-03)
+
+
+### Performance Improvements
+
+* **CHANGELOG.md:** add changelog ([26f3872](https://github.com/LeeRayno/vov/commit/26f3872))
+
+
+
 ## [1.0.2](https://github.com/LeeRayno/vov/compare/v1.0.1...v1.0.2) (2018-11-29)
 
 
