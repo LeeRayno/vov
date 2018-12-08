@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/LeeRayno/vov/compare/v1.0.3...v1.0.4) (2018-12-08)
+
+
+### Features
+
+* **toast:** add toast component ([1ba1442](https://github.com/LeeRayno/vov/commit/1ba1442))
+
+
+
 ## [1.0.3](https://github.com/LeeRayno/vov/compare/v1.0.2...v1.0.3) (2018-12-03)
 
 
