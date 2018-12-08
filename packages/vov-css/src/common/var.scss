@@ -9,7 +9,6 @@ $--color-warning: #eabb3b !default;
 $--color-success: #38b361 !default;
 $--color-danger: #ff525e !default;
 
-
 /* Button
 -------------------------- */
 $--button-border-radius: 3px !default;
@@ -30,3 +29,14 @@ $--button-large-size: 17px !default;
 $--button-normal-size: 16px !default;
 $--button-small-size: 14px !default;
 $--button-mini-size: 12px !default;
+
+/* Toast
+-------------------------- */
+$--toast-background-color: rgba(0, 0, 0, 0.7) !default;
+$--toast-vertical-padding: 9px !default;
+$--toast-horizental-padding: 12px !default;
+$--toast-content-radius: 5px !default;
+$--toast-line-height: 20px !default;
+$--toast-font-size: 14px !default;
+$--toast-icon-size: 30px !default;
+$--toast-min-width: 90px !default;

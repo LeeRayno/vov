@@ -24,3 +24,4 @@
 ### 链接
 
 - [意见反馈](https://github.com/LeeRayno/vov/issues)
+- [更新日志](https://github.com/LeeRayno/vov/blob/master/CHANGELOG.md)

@@ -1,16 +1,18 @@
 import Hello from '../packages/hello'
 import Button from '../packages/button'
 import Icon from '../packages/icon'
+import Toast from '../packages/toast'
 
 const components = [
   Hello,
   Button,
-  Icon
+  Icon,
+  Toast
 ]
 
 const install = function(Vue) {
   components.forEach(component => {
-    Vue.component(component.name, component)
+    Vue.use(component)
   })
 }
 
@@ -22,7 +24,8 @@ export {
   install,
   Hello,
   Button,
-  Icon
+  Icon,
+  Toast
 }
 
 export default {
