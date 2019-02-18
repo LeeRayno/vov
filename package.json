@@ -19,8 +19,7 @@
     "build:docs": "node build/build.js",
     "build:lib": "webpack --progress --hide-modules --config build/webpack.lib.conf.js",
     "build:css": "gulp build --gulpfile packages/vov-css/gulpfile.js && rimraf lib/vov-css && cp-cli packages/vov-css/lib lib/vov-css",
-    "build": "npm run build:docs && npm run build:lib && npm run build:css",
-    "prepublishOnly": "npm run build"
+    "build": "npm run build:docs && npm run build:lib && npm run build:css"
   },
   "files": [
     "lib"
