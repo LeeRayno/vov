@@ -2,7 +2,17 @@
 
 > study how to build a UI Component libray for Vue
 
+[![Build Status](https://travis-ci.com/LeeRayno/vov.svg?branch=master)](https://travis-ci.com/LeeRayno/vov)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+## Docs
+[docs](https://leerayno.github.io/vov/
+)
+## Preview
+You can scan the following QR code to access the examples or Modulate the browser to the mobile mode:
+
+![演示](https://github.com/LeeRayno/vov/blob/master/qrcode.png)
+
 ## Build Setup
 
 ``` bash

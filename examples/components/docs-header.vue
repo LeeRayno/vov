@@ -19,6 +19,7 @@ export default {
 
 <style lang="scss">
 @import "packages/vov-css/src/mixins/mixins.scss";
+
 @include b(header) {
   position: fixed;
   top: 0;
@@ -28,7 +29,7 @@ export default {
   height: 60px;
   padding: 0 20px;
   background: hsla(0, 0%, 100%, 0.4);
-  box-shadow: 0 0 1px rgba(0,0,0,0.25);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +44,6 @@ export default {
       background-size: contain;
       padding-left: 45px;
     }
-
   }
 
   @include e(link) {

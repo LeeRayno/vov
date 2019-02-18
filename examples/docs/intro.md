@@ -2,7 +2,7 @@
 
 <div class="vov-intro">
   <div class="vov-intro__logo" >
-    <img src="https://github.com/LeeRayno/vov/blob/master/examples/assets/logo.png?raw=true">
+    <img src="https://github.com/LeeRayno/vov/blob/master/qrcode.png?raw=true">
   </div>
   <h1 class="vov-intro__title">vov</h1>
   <p class="vov-intro__subtitle">一套基于 Vue 2.0 的移动端 UI 组件库</p>

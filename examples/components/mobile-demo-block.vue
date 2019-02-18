@@ -33,7 +33,8 @@ export default {
 
   @include e(content) {
     font-size: 0;
-    .vov-button{
+
+    .vov-button {
       margin-right: 10px;
       margin-bottom: 10px;
     }
