@@ -150,6 +150,6 @@
         "git add"
       ]
     },
-    "ignore": ["./docs/*.js", "./lib/*.js"]
+    "ignore": ["./docs/static/js/*.js", "./lib/*.js"]
   }
 }
