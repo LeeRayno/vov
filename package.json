@@ -20,7 +20,7 @@
     "build:lib": "webpack --progress --hide-modules --config build/webpack.lib.conf.js",
     "build:css": "gulp build --gulpfile packages/vov-css/gulpfile.js && rimraf lib/vov-css && cp-cli packages/vov-css/lib lib/vov-css",
     "build": "npm run build:docs && npm run build:lib && npm run build:css",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "lib"
@@ -43,6 +43,8 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -73,9 +75,11 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "gccl": "^1.0.13",
     "gulp": "^3.9.1",
     "highlight": "^0.2.4",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^1.3.1",
     "inject-loader": "^3.0.0",
     "ip": "^1.1.5",
     "karma": "^1.4.1",
@@ -87,6 +91,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "lint-staged": "^8.1.4",
     "mocha": "^3.2.0",
     "node-notifier": "^5.1.2",
     "node-sass": "^4.10.0",
@@ -131,5 +136,18 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "ignore": ["./docs/*", "./lib/*"]
   }
 }

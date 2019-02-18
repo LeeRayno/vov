@@ -37,7 +37,8 @@ export default {
 
     handleClick3() {
       this.$toast({
-        icon: 'fire'
+        icon: 'fire',
+        showModal: true
       })
     },
 

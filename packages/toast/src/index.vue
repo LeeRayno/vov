@@ -23,8 +23,11 @@
 </template>
 
 <script>
+import popup from '../../mixins/popup/index'
 export default {
   name: 'VovToast',
+
+  mixins: [popup],
 
   props: {
     icon: {
@@ -48,12 +51,6 @@ export default {
     }
   },
 
-  data() {
-    return {
-      curentValue: false
-    }
-  },
-
   methods: {
     show() {
       this.curentValue = true
@@ -63,10 +60,6 @@ export default {
       this.timer = setTimeout(() => {
         this.curentValue = false
       }, this.duration)
-    },
-
-    hide() {
-      this.curentValue = false
     }
   }
 }

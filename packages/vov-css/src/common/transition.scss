@@ -5,5 +5,23 @@
 
 .vov-fade-enter-active,
 .vov-fade-leave-active {
-  transition: opacity 1s;
+  transition: opacity $--duration-time;
+}
+
+.vov-zoom-enter-active {
+  animation: zoom $--duration-time;
+}
+
+@keyframes zoom {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+  }
+
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
 }

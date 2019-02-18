@@ -1,7 +1,12 @@
+/* Duration
+-------------------------- */
+$--duration-time: 400ms;
+
 /* Colors
 -------------------------- */
 $--color-white: #fff !default;
 $--color-black: #000 !default;
+$--color-border: #a3a3a3 !default;
 
 $--color-default: #fff !default;
 $--color-primary: #ff6b23 !default;
@@ -40,3 +45,15 @@ $--toast-line-height: 20px !default;
 $--toast-font-size: 14px !default;
 $--toast-icon-size: 30px !default;
 $--toast-min-width: 90px !default;
+
+/* Modal
+-------------------------- */
+$--modal-background-color: rgba(0, 0, 0, 0.7) !default;
+
+/* Dialog
+-------------------------- */
+$--dialog-header-padding: 20px !default;
+$--dialog-header-size: 16px !default;
+$--dialog-content-size: 14px !default;
+$--dialog-border-radius: 5px !default;
+$--dialog-content-color: #666 !default;

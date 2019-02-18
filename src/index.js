@@ -2,12 +2,14 @@ import Hello from '../packages/hello'
 import Button from '../packages/button'
 import Icon from '../packages/icon'
 import Toast from '../packages/toast'
+import Dialog from '../packages/dialog'
 
 const components = [
   Hello,
   Button,
   Icon,
-  Toast
+  Toast,
+  Dialog
 ]
 
 const install = function(Vue) {
@@ -25,7 +27,8 @@ export {
   Hello,
   Button,
   Icon,
-  Toast
+  Toast,
+  Dialog
 }
 
 export default {

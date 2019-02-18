@@ -1,4 +1,5 @@
 @import "./functions.scss";
+@import "../common/var.scss";
 
 /* BEM
  -------------------------- */
@@ -63,8 +64,6 @@
 /* 1PX
  -------------------------- */
 
-$border-color: #ccc;
-
 %common {
   content: "";
   position: absolute;
@@ -74,7 +73,7 @@ $border-color: #ccc;
   box-sizing: border-box;
 }
 
-@mixin vov-1px--surround($style: solid, $color: $border-color, $radius: 0) {
+@mixin vov-1px--surround($style: solid, $color: $--color-border, $radius: 0) {
   @extend %common;
 
   @include wh();
@@ -105,13 +104,13 @@ $border-color: #ccc;
   }
 }
 
-@mixin vov-1px--top-bottom($style: solid, $color: $border-color) {
+@mixin vov-1px--top-bottom($style: solid, $color: $--color-border) {
   @include vov-1px--surround($style: $style, $color: $color, $radius: 0);
 
   border-width: 1px 0;
 }
 
-@mixin vov-1px--top($style: solid, $color: $border-color) {
+@mixin vov-1px--top($style: solid, $color: $--color-border) {
   @extend %common;
 
   @include wh($height: 0);
@@ -131,14 +130,14 @@ $border-color: #ccc;
   }
 }
 
-@mixin vov-1px--bottom($style: solid, $color: $border-color) {
+@mixin vov-1px--bottom($style: solid, $color: $--color-border) {
   @include vov-1px--top($style: $style, $color: $color);
 
   bottom: 0;
   top: initial;
 }
 
-@mixin vov-1px--left($style: solid, $color: $border-color) {
+@mixin vov-1px--left($style: solid, $color: $--color-border) {
   @extend %common;
 
   @include wh($width: 0, $height: 100%);
@@ -158,7 +157,7 @@ $border-color: #ccc;
   }
 }
 
-@mixin vov-1px--right($style: solid, $color: $border-color) {
+@mixin vov-1px--right($style: solid, $color: $--color-border) {
   @include vov-1px--left($style: $style, $color: $color);
 
   right: 0;

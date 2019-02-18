@@ -1,0 +1,58 @@
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+@include b(dialog) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: $--color-white;
+  border-radius: $--dialog-border-radius;
+  overflow: hidden;
+  width: 80%;
+
+  @include m(alert) {
+    button {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include e(header) {
+    padding-top: $--dialog-header-padding;
+    font-size: $--dialog-header-size;
+    line-height: 1;
+    text-align: center;
+  }
+
+  @include e(content) {
+    padding: 20px;
+    font-size: $--dialog-content-size;
+    color: $--dialog-content-color;
+  }
+
+  @include e(footer) {
+    display: flex;
+
+    button {
+      flex: 1;
+      border-radius: 0;
+      position: relative;
+
+      &.vov-dialog__footer--cancel {
+        &::after {
+          display: none;
+        }
+      }
+
+      &.vov-dialog__footer--ensure {
+        &::after {
+          border: none;
+
+          @include vov-1px--left();
+        }
+      }
+    }
+  }
+}
