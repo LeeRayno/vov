@@ -1,6 +1,6 @@
 {
   "name": "vov",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "study how to build a UI Component libray for Vue",
   "main": "lib/vov.js",
   "module": "/lib/vov.js",
@@ -150,6 +150,9 @@
         "git add"
       ]
     },
-    "ignore": ["./docs/static/js/*.js", "./lib/*.js"]
+    "ignore": [
+      "./docs/static/js/*.js",
+      "./lib/*.js"
+    ]
   }
 }

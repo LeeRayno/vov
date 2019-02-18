@@ -1,3 +1,12 @@
+## [1.0.5](https://github.com/LeeRayno/vov/compare/v1.0.4...v1.0.5) (2019-02-18)
+
+
+### Features
+
+* **dialog:** lint ([a02e713](https://github.com/LeeRayno/vov/commit/a02e713))
+
+
+
 ## [1.0.4](https://github.com/LeeRayno/vov/compare/v1.0.3...v1.0.4) (2018-12-08)
 
 
