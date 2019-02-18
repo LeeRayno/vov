@@ -144,10 +144,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --fix",
-      "git add"
-    ],
+    "linters": {
+      "*.{js,vue}": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
     "ignore": ["./docs/*", "./lib/*"]
   }
 }
